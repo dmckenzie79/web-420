@@ -1,2 +1,5 @@
 # web-420
-RESTful API repository for Bellevue coursework
+Assignments for Web 420 course 
+# contributors
+Professor Krasso - Bellevue University
+Diandra McKenzie - Bellevue University
