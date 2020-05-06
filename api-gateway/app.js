@@ -23,12 +23,14 @@ mongoose.Promise = require('bluebird');
 
 
 var indexRouter = require('./routes/index');
+var apiCatalog = require('./routes/api-catalog');
+
 
 
 var app = express();
 
 // MongoDB compass connection
-var mongoDB = 'mongodb+srv://admin:admin@api-gateway-52qqj.mongodb.net/test';
+var mongoDB = 'mongodb+srv://admin:admin2020@cluster-1-6d0ag.mongodb.net/api-catalog';
 
 //create connection
 mongoose.connect(mongoDB, {
@@ -61,6 +63,7 @@ app.use(express.urlencoded({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/api', apiCatalog);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
