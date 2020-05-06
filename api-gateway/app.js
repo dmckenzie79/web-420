@@ -30,8 +30,7 @@ var apiCatalog = require('./routes/api-catalog');
 var app = express();
 
 // MongoDB compass connection
-var mongoDB = 'mongodb+srv://admin:admin2020@cluster-1-6d0ag.mongodb.net/api-catalog';
-
+var mongoDB = 'mongodb+srv://admin:admin2020@cluster-1-6d0ag.mongodb.net';
 //create connection
 mongoose.connect(mongoDB, {
     useNewUrlParser: true,
