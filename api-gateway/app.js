@@ -11,7 +11,7 @@
 // start program
 
 //require
-var createError = require('http-errors');
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -66,7 +66,9 @@ app.use('/api', apiCatalog);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
 // error handler
